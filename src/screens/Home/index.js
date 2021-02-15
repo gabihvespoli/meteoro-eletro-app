@@ -2,7 +2,6 @@ import React from "react";
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   Image,
   ScrollView,
@@ -13,7 +12,13 @@ import styles from "./styles";
 import Earth from "../../../assets/meteor-earth.jpg";
 import Logo from "../../../assets/meteoro-eletro.png";
 
-function Home() {
+function Home({ navigation }) {
+  function ver() {
+    navigation.navigate("Products");
+  }
+  function logoff() {
+    navigation.navigate("Login");
+  }
   return (
     <ScrollView style={styles.container}>
       <View style={styles.top}>
@@ -26,10 +31,10 @@ function Home() {
       <View style={styles.inputs}>
         <Text
           style={{
-            color: "#F1F1F1",
+            color: "#9ECE2D",
             fontSize: 30,
             alignSelf: "center",
-            marginBottom: 15,
+            marginBottom: 20,
           }}
         >
           Seja bem vindo(a)!
@@ -38,17 +43,25 @@ function Home() {
           style={{
             color: "#F1F1F1",
             fontSize: 20,
-            alignSelf: "center",
-            marginBottom: 15,
+            textAlign: "justify",
+            marginBottom: 20,
             fontWeight: "300",
           }}
         >
           Aqui em nossa loja, programadores tem desconto nos produtos para a sua
           casa!
         </Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={ver}>
           <Text style={{ color: "#F1F1F1", fontSize: 20, fontWeight: "bold" }}>
             Ver Produtos
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, styles.buttonLogoff]}
+          onPress={logoff}
+        >
+          <Text style={{ color: "#F69220", fontSize: 20, fontWeight: "bold" }}>
+            Sair
           </Text>
         </TouchableOpacity>
       </View>
