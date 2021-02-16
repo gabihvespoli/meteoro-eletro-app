@@ -28,13 +28,12 @@ function Products({ navigation }) {
           <View style={styles.content}>
             {listaProdutos.map((produto, id) => {
               return (
-                <Card>
-                  <Card.Title>OFERTA</Card.Title>
+                <Card key={id}>
+                  <Card.Title style={{ color: '#9ECE2D', fontSize: 30 }}>OFERTA</Card.Title>
                   <Card.Divider />
                   <Text
-                    key={id}
                     style={{
-                      fontSize: "25",
+                      fontSize: 25,
                       fontWeight: "bold",
                       color: "black",
                       marginBottom: 10,
@@ -58,7 +57,7 @@ function Products({ navigation }) {
                   ></Card.Image>
                   <Text
                     style={{
-                      fontSize: "25",
+                      fontSize: 25,
                       fontWeight: "bold",
                       color: "black",
                       marginBottom: 10,
@@ -67,7 +66,7 @@ function Products({ navigation }) {
                   >
                     {produto.valor}
                   </Text>
-                  <Button
+                  {/* <Button
                     buttonStyle={{
                       borderRadius: 20,
                       marginHorizontal: 80,
@@ -75,7 +74,12 @@ function Products({ navigation }) {
                       backgroundColor: "purple",
                     }}
                     title="COMPRAR"
-                  />
+                  /> */}
+                  <TouchableOpacity style={[styles.button, styles.buttonComprar]} onPress={voltar}>
+                    <Text style={{ color: "#F1F1F1", fontSize: 20, fontWeight: "bold" }}>
+                      Comprar
+                    </Text>
+                  </TouchableOpacity>
                 </Card>
               );
             })}

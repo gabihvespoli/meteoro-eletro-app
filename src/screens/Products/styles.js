@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "purple",
   },
+  buttonComprar: {
+    marginHorizontal: 80,
+    backgroundColor: '#F69220'
+  }
 });
 
 export default styles;
