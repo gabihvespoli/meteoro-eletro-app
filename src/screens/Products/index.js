@@ -6,7 +6,7 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import { Card, Button } from "react-native-elements";
+import { Card } from "react-native-elements";
 
 import styles from "./styles";
 import Earth from "../../../assets/meteor-earth.jpg";
@@ -66,15 +66,6 @@ function Products({ navigation }) {
                   >
                     {produto.valor}
                   </Text>
-                  {/* <Button
-                    buttonStyle={{
-                      borderRadius: 20,
-                      marginHorizontal: 80,
-                      marginVertical: 10,
-                      backgroundColor: "purple",
-                    }}
-                    title="COMPRAR"
-                  /> */}
                   <TouchableOpacity style={[styles.button, styles.buttonComprar]} onPress={voltar}>
                     <Text style={{ color: "#F1F1F1", fontSize: 20, fontWeight: "bold" }}>
                       Comprar

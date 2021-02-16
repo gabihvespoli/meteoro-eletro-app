@@ -41,16 +41,6 @@ function Login({ navigation }) {
       </View>
 
       <View style={styles.inputs}>
-        {/* <Text
-          style={{
-            color: "#F1F1F1",
-            fontSize: 30,
-            alignSelf: "center",
-            marginBottom: 15,
-          }}
-        >
-          Meteoro Eletro
-        </Text> */}
         <TextInput
           placeholder="Digite seu usuário"
           style={styles.input}

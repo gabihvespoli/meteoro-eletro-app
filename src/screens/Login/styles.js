@@ -29,8 +29,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: "#fff",
     fontSize: 20,
-    // backgroundColor: 'rgba(255,255,255,0.3)',
-    // placeholderTextColor: '#FFF',
   },
   button: {
     height: 50,
